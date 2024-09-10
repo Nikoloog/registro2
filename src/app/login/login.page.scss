@@ -1,85 +1,105 @@
 ion-content {
-    --background: url('/assets/fondo.jpg') no-repeat center center / cover;
+  --background: url('/assets/fondo.jpg') no-repeat center center / cover;
+}
+
+ion-toolbar {
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toolbar-logo {
+  height: 200px;
+  width: auto;
+  max-height: 150px;
+}
+
+.login-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 16px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+.login-logo {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: scaleIn 1s forwards;
+}
+
+.toolbar-logo {
+  width: 100px;
+  height: auto;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
   }
-  
-  ion-toolbar {
-    height: 56px; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
   }
-  
-  .toolbar-logo {
-    height: 200px; 
-    width: auto;
-    max-height: 150px;
+  to {
+    transform: scale(1);
+    opacity: 1;
   }
-  
+}
+
+.slide-in {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+ion-item {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 16px;
+  animation-delay: 0.5s;
+}
+
+ion-button {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 16px;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 600px) {
   .login-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    padding: 16px;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.8); 
-    border-radius: 10px;
-    opacity: 0;
-    animation: fadeIn 1s forwards; 
-  }
-  
-  .login-logo {
-    width: 200px; 
-    height: auto;
-    margin-bottom: 20px;
-    opacity: 0;
-  animation: scaleIn 1s forwards; 
-  }
-  
-  .toolbar-logo {
-    width: 100px;
-    height: auto;
+    padding: 10px;
   }
 
-  @keyframes fadeIn {
-    to {
-      opacity: 1;
-    }
+  .login-logo {
+    width: 150px;
   }
-  
-  @keyframes scaleIn {
-    from {
-      transform: scale(0);
-      opacity: 0;
-    }
-    to {
-      transform: scale(1);
-      opacity: 1;
-    }
-  }
-  
-  .slide-in {
-    opacity: 0;
-    transform: translateX(-100%);
-    animation: slideIn 0.5s forwards;
-  }
-  
-  @keyframes slideIn {
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
+
   ion-item {
-    width: 100%;
-    max-width: 400px; 
-    margin-bottom: 16px;
-    animation-delay: 0.5s; 
+    max-width: 100%;
   }
-  
+
   ion-button {
-    width: 100%;
-    max-width: 400px; 
-    margin-bottom: 16px;
+    max-width: 100%;
   }
+}

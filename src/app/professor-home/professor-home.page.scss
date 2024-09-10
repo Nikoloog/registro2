@@ -1,4 +1,3 @@
-
 ion-header {
   ion-toolbar {
     ion-title {
@@ -18,7 +17,7 @@ ion-header {
 }
 
 ion-content {
-    --background:url('/assets/fondo.jpg') no-repeat center center / cover;
+  --background: url('/assets/fondo.jpg') no-repeat center center / cover;
   --background-size: cover;
   display: flex;
   justify-content: center;
@@ -30,25 +29,25 @@ ion-content {
 
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   max-width: 1200px;
-  margin-top: 50px;
+  margin-top: 50px; 
 }
 
 .right-section {
   display: flex;
   flex-direction: column;
   align-items: center; 
-  width: 50%;
+  width: 100%;
   margin-top: 20px; 
-  padding-left: 50px; 
+  padding-left: 0; 
 }
 
 .welcome-message {
   margin-bottom: 20px;
-  margin-left: 60px;
 }
 
 .options {
@@ -56,7 +55,7 @@ ion-content {
   flex-direction: column;
   align-items: center; 
   width: 100%;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
 
 ion-card {
@@ -64,16 +63,12 @@ ion-card {
   max-width: 400px;
   margin-bottom: 16px;
   text-align: center;
-  margin-left: 100px;
-  animation-delay: 0.5s;
 }
 
 ion-button {
   width: 200px;
-  margin-bottom: 100px;
-  align-self: center; /* Centra el botón */
-  margin-left : 60px;
-  animation-delay: 0.5s;
+  margin-bottom: 20px;
+  align-self: center; 
 }
 
 .container {
@@ -84,5 +79,20 @@ ion-button {
 @keyframes fadeIn {
   to {
     opacity: 1;
+  }
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 600px) {
+  .container {
+    margin-top: 20px;
+  }
+
+  ion-card {
+    margin-left: 0;
+  }
+
+  ion-button {
+    margin-left: 0;
   }
 }
