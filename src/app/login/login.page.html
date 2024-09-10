@@ -7,17 +7,17 @@
 </ion-header>
 
 <ion-content>
-  <div class="login-content">
-    <img src="assets/icon/dodo.jpg" alt="Duoc UC Logo" class="login-logo">
-    <ion-item>
+  <div class="login-content fade-in">
+    <img src="assets/icon/dodo.jpg" alt="Duoc UC Logo" class="login-logo scale-in">
+    <ion-item class="slide-in">
       <ion-label position="floating">Nombre de Usuario</ion-label>
       <ion-input [(ngModel)]="username"></ion-input>
     </ion-item>
-    <ion-item>
+    <ion-item class="slide-in">
       <ion-label position="floating">Contraseña</ion-label>
       <ion-input [(ngModel)]="password" type="password"></ion-input>
     </ion-item>
-    <ion-item>
+    <ion-item class="slide-in">
       <ion-label>Rol</ion-label>
       <ion-select [(ngModel)]="role">
         <ion-select-option value="profesor">Profesor</ion-select-option>

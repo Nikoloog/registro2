@@ -3,14 +3,14 @@ ion-content {
   }
   
   ion-toolbar {
-    height: 56px; // Altura fija para la barra de herramientas
+    height: 56px; 
     display: flex;
     justify-content: center;
     align-items: center;
   }
   
   .toolbar-logo {
-    height: 200px; // Ajusta el tamaño del logo en la barra de herramientas
+    height: 200px; 
     width: auto;
     max-height: 150px;
   }
@@ -23,24 +23,63 @@ ion-content {
     height: 100%;
     padding: 16px;
     text-align: center;
-    background: rgba(255, 255, 255, 0.8); // Fondo blanco semitransparente para el contenido
-    border-radius: 10px; // Bordes redondeados para el contenido
+    background: rgba(255, 255, 255, 0.8); 
+    border-radius: 10px;
+    opacity: 0;
+    animation: fadeIn 1s forwards; 
   }
   
   .login-logo {
-    width: 200px; // Ajusta el tamaño del logo según tus necesidades
+    width: 200px; 
     height: auto;
-    margin-bottom: 20px; // Espacio entre el logo y el siguiente elemento
+    margin-bottom: 20px;
+    opacity: 0;
+  animation: scaleIn 1s forwards; 
   }
   
+  .toolbar-logo {
+    width: 100px;
+    height: auto;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes scaleIn {
+    from {
+      transform: scale(0);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .slide-in {
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideIn 0.5s forwards;
+  }
+  
+  @keyframes slideIn {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
   ion-item {
     width: 100%;
-    max-width: 400px; // Ajusta el ancho máximo de los campos de entrada
-    margin-bottom: 16px; // Espacio entre los campos de entrada
+    max-width: 400px; 
+    margin-bottom: 16px;
+    animation-delay: 0.5s; 
   }
   
   ion-button {
     width: 100%;
-    max-width: 400px; // Ajusta el ancho máximo de los botones
-    margin-bottom: 16px; // Espacio entre los botones
+    max-width: 400px; 
+    margin-bottom: 16px;
   }

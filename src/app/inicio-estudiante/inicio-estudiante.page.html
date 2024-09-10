@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <img src="assets/icon/ree.png" alt="REE Logo" class="ree-logo">
+    </ion-title>
+    <ion-buttons slot="end">
+      <img src="assets/icon/dodo.jpg" alt="Duoc Logo" class="duoc-logo">
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <div class="right-section">
+      <div class="welcome-message">
+        <ion-label>
+          Bienvenido {{ role === 'profesor' ? 'Profesor' : 'Alumno' }} {{ username }}
+        </ion-label>
+      </div>
+      <div class="options">
+        <ion-card button (click)="navigateTo('cursos-disponibles')">
+          <ion-card-header>
+            <ion-card-title>Listar Cursos</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+        <ion-card button (click)="navigateTo('qr-lector')">
+          <ion-card-header>
+            <ion-card-title>QR</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </div>
+      <ion-button expand="block" color="danger" (click)="logout()">Salir</ion-button>
+    </div>
+  </div>
+</ion-content>

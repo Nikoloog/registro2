@@ -8,7 +8,7 @@ ion-content {
     align-items: center;
     height: 100%;
     width: 100%;
-    background-color: transparent; // Asegúrate de que el fondo sea transparente para ver la imagen
+    background-color: transparent;
   }
   
   .splash-content {
@@ -17,14 +17,14 @@ ion-content {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: rgba(255, 255, 255, 0.8); // Fondo blanco semitransparente para el contenido
-    border-radius: 10px; // Bordes redondeados para el contenido
-    padding: 20px; // Espacio interno para el contenido
+    background: rgba(255, 255, 255, 0.8); 
+    border-radius: 10px;
+    padding: 20px;
   }
   
   .splash-logo {
-    width: 200px; // Ajusta el tamaño del logo según tus necesidades
+    width: 200px; 
     height: auto;
     margin-bottom: 20px; 
-    max-height: 40px;// Espacio entre el logo y el siguiente elemento
+    max-height: 40px;
   }

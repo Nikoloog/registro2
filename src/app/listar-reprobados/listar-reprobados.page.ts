@@ -25,7 +25,7 @@ export class ListarReprobadosPage implements OnInit {
     { name: 'Curso 4', link: '/curso4-reprobados' }
   ];
 
-  // Simular datos de estudiantes reprobados para cada curso
+  
   studentsByCourse: StudentsByCourse = {
     'Curso 1': [
       { name: 'Juan Pérez', grade: 'Reprobado' },

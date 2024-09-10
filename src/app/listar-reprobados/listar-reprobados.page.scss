@@ -24,16 +24,16 @@ ion-content {
 }
 
 .duoc-logo {
-  height: 40px; /* Ajusta este valor según sea necesario */
+  height: 40px; 
 }
 
 ion-button {
   width: 100%;
-  max-width: 400px; /* Ajusta este valor para agrandar los botones */
-  height: 60px; /* Ajusta este valor para agrandar la altura de los botones */
-  font-size: 18px; /* Ajusta este valor para agrandar el texto de los botones */
+  max-width: 400px;
+  height: 60px;
+  font-size: 18px; 
   margin-top: 20px;
   align-self: center;
-  --background: white; /* Cambia el color de fondo del botón a blanco */
-  --color: black; /* Cambia el color del texto del botón a negro */
+  --background: white; 
+  --color: black;
 }

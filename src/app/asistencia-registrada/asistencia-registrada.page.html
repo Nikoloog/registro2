@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Asistencia Registrada</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="confirmation-container">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>¡Asistencia Registrada!</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-icon name="checkmark-circle" color="success" class="success-icon"></ion-icon>
+        <p>Tu asistencia ha sido registrada exitosamente, {{ username }}.</p>
+      </ion-card-content>
+    </ion-card>
+    <ion-button expand="full" color="primary" (click)="volver()">Volver</ion-button>
+  </div>
+</ion-content>

@@ -13,7 +13,7 @@ export class SplashPage implements OnInit {
   ngOnInit() {
     setTimeout(() => {
       this.router.navigate(['/login']);
-    }, 3000); // Redirigir después de 3 segundos
+    }, 3000); 
   }
 
 }

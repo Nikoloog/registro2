@@ -7,11 +7,11 @@ ion-header {
       align-items: center;
     }
     .ree-logo {
-      max-height: 40px; /* Ajusta el tamaño de la imagen */
+      max-height: 40px; 
     }
     ion-buttons {
       .duoc-logo {
-        max-height: 70px; /* Ajusta el tamaño de la imagen */
+        max-height: 70px; 
       }
     }
   }
@@ -34,16 +34,16 @@ ion-content {
   align-items: center;
   width: 100%;
   max-width: 1200px;
-  margin-top: 50px; /* Baja el contenido */
+  margin-top: 50px;
 }
 
 .right-section {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centra el contenido */
+  align-items: center; 
   width: 50%;
-  margin-top: 20px; /* Baja el contenido de la sección derecha */
-  padding-left: 50px; /* Ajusta este valor para mover el contenido más a la derecha */
+  margin-top: 20px; 
+  padding-left: 50px; 
 }
 
 .welcome-message {
@@ -54,9 +54,9 @@ ion-content {
 .options {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centra el contenido */
+  align-items: center; 
   width: 100%;
-  margin-bottom: 20px; /* Baja los botones */
+  margin-bottom: 20px; 
 }
 
 ion-card {
@@ -65,6 +65,7 @@ ion-card {
   margin-bottom: 16px;
   text-align: center;
   margin-left: 100px;
+  animation-delay: 0.5s;
 }
 
 ion-button {
@@ -72,4 +73,16 @@ ion-button {
   margin-bottom: 100px;
   align-self: center; /* Centra el botón */
   margin-left : 60px;
+  animation-delay: 0.5s;
+}
+
+.container {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }

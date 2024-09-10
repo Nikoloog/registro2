@@ -1,0 +1,32 @@
+ion-header {
+  --background: var(--ion-color-primary);
+  --color: #fff;
+}
+
+.confirmation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 20px;
+}
+
+ion-card {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.success-icon {
+  font-size: 4rem;
+  margin: 20px 0;
+}
+
+.ticket-image {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 10px;
+  object-fit: contain; 
+}

@@ -90,6 +90,22 @@ const routes: Routes = [
   {
     path: 'curso4-reprobados',
     loadChildren: () => import('./curso4-reprobados/curso4-reprobados.module').then( m => m.Curso4ReprobadosPageModule)
+  },
+  {
+    path: 'inicio-estudiante',
+    loadChildren: () => import('./inicio-estudiante/inicio-estudiante.module').then( m => m.InicioEstudiantePageModule)
+  },
+  {
+    path: 'cursos-disponibles',
+    loadChildren: () => import('./cursos-disponibles/cursos-disponibles.module').then( m => m.CursosDisponiblesPageModule)
+  },
+  {
+    path: 'qr-lector',
+    loadChildren: () => import('./qr-lector/qr-lector.module').then( m => m.QrLectorPageModule)
+  },
+  {
+    path: 'asistencia-registrada',
+    loadChildren: () => import('./asistencia-registrada/asistencia-registrada.module').then( m => m.AsistenciaRegistradaPageModule)
   }
 ];
 

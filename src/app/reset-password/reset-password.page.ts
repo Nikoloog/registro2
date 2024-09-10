@@ -8,7 +8,7 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['./reset-password.page.scss'],
 })
 export class ResetPasswordPage {
-  username: string = ''; // Inicializar la propiedad
+  username: string = ''; 
 
   constructor(private router: Router, private alertController: AlertController) {}
 
