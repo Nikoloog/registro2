@@ -1,0 +1,21 @@
+ion-content {
+  --background: url('/assets/fondo.jpg') no-repeat center center / cover;
+}
+
+.duoc-logo {
+  height: 40px; /* Ajusta este valor según sea necesario */
+}
+
+ion-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+
+ion-icon {
+  font-size: 24px;
+  margin-left: auto;
+  padding-top: 20px; 
+  max-height: 90px;/* Ajusta el tamaño del icono según sea necesario */
+}

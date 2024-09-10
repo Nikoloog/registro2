@@ -66,6 +66,30 @@ const routes: Routes = [
   {
     path: 'qr-cursos',
     loadChildren: () => import('./qr-cursos/qr-cursos.module').then( m => m.QrCursosPageModule)
+  },
+  {
+    path: 'lista-estudiantes',
+    loadChildren: () => import('./lista-estudiantes/lista-estudiantes.module').then( m => m.ListaEstudiantesPageModule)
+  },
+  {
+    path: 'listar-reprobados',
+    loadChildren: () => import('./listar-reprobados/listar-reprobados.module').then( m => m.ListarReprobadosPageModule)
+  },
+  {
+    path: 'curso1-reprobados',
+    loadChildren: () => import('./curso1-reprobados/curso1-reprobados.module').then( m => m.Curso1ReprobadosPageModule)
+  },
+  {
+    path: 'curso2-reprobados',
+    loadChildren: () => import('./curso2-reprobados/curso2-reprobados.module').then( m => m.Curso2ReprobadosPageModule)
+  },
+  {
+    path: 'curso3-reprobados',
+    loadChildren: () => import('./curso3-reprobados/curso3-reprobados.module').then( m => m.Curso3ReprobadosPageModule)
+  },
+  {
+    path: 'curso4-reprobados',
+    loadChildren: () => import('./curso4-reprobados/curso4-reprobados.module').then( m => m.Curso4ReprobadosPageModule)
   }
 ];
 

@@ -25,5 +25,6 @@ ion-content {
   .splash-logo {
     width: 200px; // Ajusta el tamaño del logo según tus necesidades
     height: auto;
-    margin-bottom: 20px; // Espacio entre el logo y el siguiente elemento
+    margin-bottom: 20px; 
+    max-height: 40px;// Espacio entre el logo y el siguiente elemento
   }

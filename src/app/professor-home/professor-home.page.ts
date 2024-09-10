@@ -13,7 +13,7 @@ export class ProfessorHomePage implements OnInit {
 
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
-      this.username = params['username'];
+      this.username = params['username'] || 'Nombre del Profesor';
     });
   }
 
