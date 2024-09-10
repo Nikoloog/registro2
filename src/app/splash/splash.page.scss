@@ -1,0 +1,29 @@
+ion-content {
+    --background: url('/assets/fondo.jpg') no-repeat center center / cover;
+  }
+  
+  .splash-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: transparent; // Asegúrate de que el fondo sea transparente para ver la imagen
+  }
+  
+  .splash-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8); // Fondo blanco semitransparente para el contenido
+    border-radius: 10px; // Bordes redondeados para el contenido
+    padding: 20px; // Espacio interno para el contenido
+  }
+  
+  .splash-logo {
+    width: 200px; // Ajusta el tamaño del logo según tus necesidades
+    height: auto;
+    margin-bottom: 20px; // Espacio entre el logo y el siguiente elemento
+  }

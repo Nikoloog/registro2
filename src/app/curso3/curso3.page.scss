@@ -1,0 +1,26 @@
+ion-content {
+  --background:url('/assets/fondo.jpg') no-repeat center center / cover;
+  }
+  
+  ion-list {
+    margin: 0; /* Elimina el margen del ion-list */
+  }
+  
+  ion-item {
+    --inner-padding-end: 0; /* Ajusta el padding interno del ion-item */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  ion-label {
+    font-size: 18px; /* Ajusta el tamaño de la fuente según tus necesidades */
+    width: auto; /* Ajusta el ancho del ion-label */
+    flex: 1; /* Permite que el ion-label ocupe el espacio disponible */
+  }
+  
+  .attendance-warning {
+    color: red; /* Cambia el color del texto de advertencia */
+    margin-left: 10px; /* Ajusta el margen izquierdo según tus necesidades */
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+  }

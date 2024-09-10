@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <img src="assets/icon/ree.png" alt="REE Logo" class="ree-logo">
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <img src="assets/icon/duoc.png" alt="Duoc Logo" class="duoc-logo">
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <div class="welcome-message">
+      <ion-label>
+        Profesor {{ username }}
+      </ion-label>
+    </div>
+    <div class="options">
+      <ion-card button (click)="navigateTo('curso1')">
+        <ion-card-header>
+          <ion-card-title>Curso 1</ion-card-title>
+        </ion-card-header>
+      </ion-card>
+      <ion-card button (click)="navigateTo('curso2')">
+        <ion-card-header>
+          <ion-card-title>Curso 2</ion-card-title>
+        </ion-card-header>
+      </ion-card>
+      <ion-card button (click)="navigateTo('curso3')">
+        <ion-card-header>
+          <ion-card-title>Curso 3</ion-card-title>
+        </ion-card-header>
+      </ion-card>
+      <ion-card button (click)="navigateTo('curso4')">
+        <ion-card-header>
+          <ion-card-title>Curso 4</ion-card-title>
+        </ion-card-header>
+      </ion-card>
+    </div>
+    <ion-button expand="block" color="primary" (click)="goBack()">Volver</ion-button>
+  </div>
+</ion-content>

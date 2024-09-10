@@ -1,0 +1,54 @@
+ion-header {
+    ion-toolbar {
+      .ree-logo, .duoc-logo {
+        max-height: 40px; /* Ajusta el tamaño de las imágenes */
+      }
+    }
+  }
+  
+  ion-content {
+      --background:url('/assets/fondo.jpg') no-repeat center center / cover;
+    --background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 16px;
+    text-align: center;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: center;
+    padding-top: 100px;
+  }
+  
+  .welcome-message {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  .options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  ion-card {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  
+  ion-button {
+    width: 200px;
+    margin-top: 20px;
+    align-self: center;
+  }

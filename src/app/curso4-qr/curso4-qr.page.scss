@@ -1,0 +1,19 @@
+ion-content {
+  --background:url('/assets/fondo.jpg') no-repeat center center / cover;
+}
+
+.qr-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.qr-container img {
+  max-width: 30%; /* Ajusta este valor según sea necesario */
+  height: auto;
+}
+
+.duoc-logo {
+  height: 40px; /* Ajusta este valor según sea necesario */
+}

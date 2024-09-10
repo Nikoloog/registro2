@@ -1,0 +1,46 @@
+ion-content {
+    --background: url('/assets/fondo.jpg') no-repeat center center / cover;
+  }
+  
+  ion-toolbar {
+    height: 56px; // Altura fija para la barra de herramientas
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .toolbar-logo {
+    height: 200px; // Ajusta el tamaño del logo en la barra de herramientas
+    width: auto;
+    max-height: 150px;
+  }
+  
+  .login-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 16px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8); // Fondo blanco semitransparente para el contenido
+    border-radius: 10px; // Bordes redondeados para el contenido
+  }
+  
+  .login-logo {
+    width: 250px; // Ajusta el tamaño del logo según tus necesidades
+    height: auto;
+    margin-bottom: 20px; // Espacio entre el logo y el siguiente elemento
+  }
+  
+  ion-item {
+    width: 100%;
+    max-width: 400px; // Ajusta el ancho máximo de los campos de entrada
+    margin-bottom: 16px; // Espacio entre los campos de entrada
+  }
+  
+  ion-button {
+    width: 100%;
+    max-width: 400px; // Ajusta el ancho máximo de los botones
+    margin-bottom: 16px; // Espacio entre los botones
+  }
