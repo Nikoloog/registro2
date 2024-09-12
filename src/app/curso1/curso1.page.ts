@@ -13,7 +13,6 @@ export class Curso1Page implements OnInit {
     { name: 'Juan Pérez', attendance: 90 },
     { name: 'María López', attendance: 60 },
     { name: 'Carlos García', attendance: 80 },
-    { name: 'Ana Martínez', attendance: 65 }
   ];
 
   constructor(private navCtrl: NavController, private route: ActivatedRoute) { }

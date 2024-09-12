@@ -10,10 +10,9 @@ import { ActivatedRoute } from '@angular/router';
 export class Curso3Page implements OnInit {
   username: string = '';
   students = [
-    { name: 'Juan Pérez', attendance: 90 },
-    { name: 'María López', attendance: 60 },
-    { name: 'Carlos García', attendance: 80 },
-    { name: 'Ana Martínez', attendance: 65 }
+    { name: 'Pedro Sanchez', attendance: 90 },
+    { name: 'Laura Gómez', attendance: 60 },
+    { name: 'Diego Fernández', attendance: 80 },
   ];
 
   constructor(private navCtrl: NavController, private route: ActivatedRoute) { }
