@@ -1,27 +1,85 @@
-ion-content {
-    --background:url('/assets/fondo.jpg') no-repeat center center / cover;
+$primary-color: #3880ff;
+$secondary-color: #3dc2ff;
+$danger-color: #f04141;
+$background-color: #f4f5f8;
+$text-color: #222;
+$font-family: 'Roboto', sans-serif;
 
+@mixin center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  font-family: $font-family;
+  background-color: $background-color;
+  color: $text-color;
+  margin: 0;
+  padding: 0;
+}
+
+ion-content {
+  --background: url('/assets/fondo.jpg') no-repeat center center / cover;
+  --background-size: cover;
+  @include center-flex;
+  height: 100%;
+  padding: 16px;
+  text-align: center;
 }
 
 ion-list {
-  margin: 0; 
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 ion-item {
-  --inner-padding-end: 0; 
+  --inner-padding-end: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: white;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+ion-item:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 ion-label {
   font-size: 18px;
-  width: auto; 
-  flex: 1; 
+  width: auto;
+  flex: 1;
 }
 
 .attendance-warning {
-  color: red; 
-  margin-left: 10px; 
+  color: $danger-color;
+  margin-left: 10px;
   white-space: nowrap;
+}
+
+ion-button {
+  width: 200px;
+  margin-top: 20px;
+  align-self: center;
+  border-radius: 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+ion-button:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 600px) {
+  ion-button {
+    width: 100%;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 1);
+  }
 }

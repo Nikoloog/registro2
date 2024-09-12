@@ -13,6 +13,9 @@
       <ion-card-content>
         <ion-icon name="checkmark-circle" color="success" class="success-icon"></ion-icon>
         <p>Tu asistencia ha sido registrada exitosamente, {{ username }}.</p>
+        <p><strong>Asignatura:</strong> {{ subjectName }}</p>
+        <p><strong>Profesor:</strong> {{ teacherName }}</p>
+        <p><strong>Sección:</strong> {{ section }}</p>
       </ion-card-content>
     </ion-card>
     <ion-button expand="full" color="primary" (click)="volver()">Volver</ion-button>

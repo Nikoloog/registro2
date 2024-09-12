@@ -1,54 +1,101 @@
+$primary-color: #3880ff;
+$secondary-color: #3dc2ff;
+$danger-color: #f04141;
+$background-color: #f4f5f8;
+$text-color: #222;
+$font-family: 'Roboto', sans-serif;
+
+@mixin center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  font-family: $font-family;
+  background-color: $background-color;
+  color: $text-color;
+  margin: 0;
+  padding: 0;
+}
+
 ion-header {
-    ion-toolbar {
-      .ree-logo, .duoc-logo {
-        max-height: 70px; 
-      }
+  ion-toolbar {
+    .ree-logo, .duoc-logo {
+      max-height: 70px; 
     }
   }
-  
-  ion-content {
-      --background:url('/assets/fondo.jpg') no-repeat center center / cover;
-    --background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    padding: 16px;
-    text-align: center;
-  }
-  
+}
+
+ion-content {
+  --background: url('/assets/fondo.jpg') no-repeat center center / cover;
+  --background-size: cover;
+  @include center-flex;
+  height: 100%;
+  padding: 16px;
+  text-align: center;
+}
+
+.container {
+  @include center-flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  padding-top: 100px;
+}
+
+.welcome-message {
+  margin-bottom: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.options {
+  @include center-flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+ion-card {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 16px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+ion-card:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+ion-button {
+  width: 200px;
+  margin-top: 20px;
+  align-self: center;
+  border-radius: 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+ion-button:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 600px) {
   .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: center;
-    padding-top: 100px;
+    padding-top: 50px;
   }
-  
-  .welcome-message {
-    margin-bottom: 20px;
-    font-size: 1.2em;
-    font-weight: bold;
-  }
-  
-  .options {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  
+
   ion-card {
-    width: 100%;
-    max-width: 400px;
-    margin-bottom: 16px;
-    text-align: center;
+    margin-left: 0;
   }
-  
+
   ion-button {
-    width: 200px;
-    margin-top: 20px;
-    align-self: center;
+    width: 100%;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 1);
   }
+}

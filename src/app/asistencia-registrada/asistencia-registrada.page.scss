@@ -10,23 +10,42 @@ ion-header {
   justify-content: center;
   height: 100%;
   padding: 20px;
+  background-color: #f9f9f9;
 }
 
 ion-card {
   width: 100%;
   max-width: 400px;
   text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ion-card-title {
+  font-size: 24px;
+  color: #333;
+}
+
+ion-card-content p {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #555;
+}
+
+ion-card-content p strong {
+  color: #333;
 }
 
 .success-icon {
   font-size: 4rem;
   margin: 20px 0;
+  color: #28a745;
 }
 
-.ticket-image {
-  width: 100%;
-  height: auto;
+ion-button {
   margin-top: 20px;
-  border-radius: 10px;
-  object-fit: contain; 
+  --background: var(--ion-color-primary);
+  --color: #fff;
 }

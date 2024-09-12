@@ -1,9 +1,19 @@
+$primary-color: #4CAF50; 
+$secondary-color: #FF9800; 
+$danger-color: #F44336; 
+$background-color: #E0F7FA; 
+$text-color: #212121; 
+
+@mixin center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 ion-header {
   ion-toolbar {
     ion-title {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include center-flex;
     }
     .ree-logo {
       max-height: 40px; 
@@ -19,28 +29,25 @@ ion-header {
 ion-content {
   --background: url('/assets/fondo.jpg') no-repeat center center / cover;
   --background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include center-flex;
   height: 100%;
   padding: 16px;
   text-align: center;
 }
 
 .container {
-  display: flex;
+  @include center-flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   max-width: 1200px;
   margin-top: 50px; 
+  opacity: 0;
+  animation: fadeIn 1s forwards;
 }
 
 .right-section {
-  display: flex;
+  @include center-flex;
   flex-direction: column;
-  align-items: center; 
   width: 100%;
   margin-top: 20px; 
   padding-left: 0; 
@@ -51,9 +58,8 @@ ion-content {
 }
 
 .options {
-  display: flex;
+  @include center-flex;
   flex-direction: column;
-  align-items: center; 
   width: 100%;
   margin-bottom: 20px;
 }
@@ -63,17 +69,29 @@ ion-card {
   max-width: 400px;
   margin-bottom: 16px;
   text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+ion-card:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 ion-button {
   width: 200px;
   margin-bottom: 20px;
   align-self: center; 
+  border-radius: 50px;
+  background-color: $primary-color;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
-.container {
-  opacity: 0;
-  animation: fadeIn 1s forwards;
+ion-button:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  background-color: darken($primary-color, 10%);
 }
 
 @keyframes fadeIn {
@@ -82,7 +100,6 @@ ion-button {
   }
 }
 
-/* Media Queries para dispositivos móviles */
 @media (max-width: 600px) {
   .container {
     margin-top: 20px;
@@ -93,6 +110,8 @@ ion-button {
   }
 
   ion-button {
-    margin-left: 0;
+    width: 100%;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 1);
   }
 }
