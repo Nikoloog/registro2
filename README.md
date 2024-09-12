@@ -2,6 +2,8 @@
 
 RegistrAPP es una aplicación para gestionar la asistencia de estudiantes mediante la lectura de códigos QR.
 
+![Logo de Ionic](https://ionicframework.com/img/ionic-logo-landscape.svg)
+
 ## Requisitos previos
 
 Antes de comenzar, asegúrate de tener instalado lo siguiente:
@@ -31,3 +33,5 @@ Sigue estos pasos para instalar y ejecutar la aplicación en tu entorno local:
 4. Para iniciar la aplicación en modo de desarrollo, ejecuta el siguiente comando:
   ```bash
         npm start
+
+
