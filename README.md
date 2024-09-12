@@ -30,4 +30,4 @@ Sigue estos pasos para instalar y ejecutar la aplicación en tu entorno local:
 
 4. Para iniciar la aplicación en modo de desarrollo, ejecuta el siguiente comando:
   ```bash
-  npm start
+    npm start
