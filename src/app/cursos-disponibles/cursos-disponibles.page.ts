@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
+import { StorageService } from '../services/storage.service';
 
 @Component({
   selector: 'app-cursos-disponibles',
@@ -7,26 +8,21 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./cursos-disponibles.page.scss'],
 })
 export class CursosDisponiblesPage implements OnInit {
-  asignaturas: { nombre: string, asistencia: number }[] = [
-    { nombre: 'Calidad de Software', asistencia: 85 },
-    { nombre: 'Programacion de Aplicaciones Moviles', asistencia: 90 },
-    { nombre: 'Arquitectura', asistencia: 75 },
-    { nombre: 'Estadistica Descriptiva', asistencia: 80 },
-    { nombre: 'Ingles Intermedio', asistencia: 95 }
+  cursos: any[] = [
+    { id: 1, nombre: 'Programación de Aplicaciones Móviles', asistencia: 0 },
+    { id: 2, nombre: 'Calidad de Software', asistencia: 0 },
+    { id: 3, nombre: 'Ética Profesional', asistencia: 0 }
   ];
-  username: string = '';
-  role: string = '';
 
-  constructor(private route: ActivatedRoute, private router: Router) {}
+  constructor(private storageService: StorageService, private router: Router) {}
 
   ngOnInit() {
-    this.route.queryParams.subscribe(params => {
-      this.username = params['username'] || 'Nombre del Estudiante';
-      this.role = params['role'] || 'alumno';
+    this.cursos.forEach(curso => {
+      curso.asistencia = this.storageService.getItem(curso.nombre) || 0;
     });
   }
 
   volver() {
-    this.router.navigate(['/inicio-estudiante'], { queryParams: { username: this.username, role: this.role } });
+    this.router.navigate(['/inicio-estudiante']);
   }
 }

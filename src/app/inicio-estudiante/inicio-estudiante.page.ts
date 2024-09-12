@@ -13,9 +13,9 @@ export class InicioEstudiantePage implements OnInit {
   username: string = '';
   role: string = '';
   cursos: any[] = [
-    { id: 1, nombre: 'Curso 1' },
-    { id: 2, nombre: 'Curso 2' },
-    { id: 3, nombre: 'Curso 3' }
+    { id: 1, nombre: 'Programación de Aplicaciones Móviles' },
+    { id: 2, nombre: 'Calidad de Software' },
+    { id: 3, nombre: 'Ética Profesional' }
   ];
 
   constructor(

@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-// Importar QRScanner solo si estás en un dispositivo móvil
-// import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner/ngx';
 
 @Component({
   selector: 'app-qr-lector',
@@ -12,7 +10,6 @@ export class QrLectorPage implements OnInit {
   username: string = '';
 
   constructor(
-    // private qrScanner: QRScanner,
     private router: Router,
     private route: ActivatedRoute
   ) {}
@@ -28,7 +25,7 @@ export class QrLectorPage implements OnInit {
     // Simular la lectura de un código QR
     setTimeout(() => {
       const simulatedQrData = 'Simulated QR Data';
-      this.router.navigate(['/asistencia-registrada'], { queryParams: { qrData: simulatedQrData, username: this.username } });
+      this.onQrScanned(simulatedQrData);
     }, 2000);
 
     // Código real para dispositivos móviles
@@ -43,8 +40,7 @@ export class QrLectorPage implements OnInit {
           this.qrScanner.hide(); // hide camera preview
           scanSub.unsubscribe(); // stop scanning
 
-          // Navigate to confirmation page
-          this.router.navigate(['/asistencia-registrada'], { queryParams: { qrData: text, username: this.username } });
+          this.onQrScanned(text);
         });
 
         this.qrScanner.show();
@@ -56,6 +52,11 @@ export class QrLectorPage implements OnInit {
       }
     }).catch((e: any) => console.log('Error is', e));
     */
+  }
+
+  onQrScanned(qr: string) {
+    console.log('QR escaneado:', qr);
+    this.router.navigate(['/asistencia-registrada'], { queryParams: { qrData: qr, username: this.username } });
   }
 
   volver() {

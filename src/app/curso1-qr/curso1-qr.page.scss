@@ -6,12 +6,16 @@ ion-content {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  width:  400px; /* Ajusta el tamaño según tus necesidades */
+  height: 400px; /* Ajusta el tamaño según tus necesidades */
+  transition: transform 0.3s ease;
+  transform: scale(2.0);
 }
 
 .qr-container img {
   max-width: 70%; 
-  height: auto;
+  max-height: auto;
+  
 }
 
 .duoc-logo {

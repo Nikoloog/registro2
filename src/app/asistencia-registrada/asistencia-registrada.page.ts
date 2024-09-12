@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { StorageService } from '../services/storage.service'; // Asegúrate de tener un servicio de almacenamiento
 
 @Component({
   selector: 'app-asistencia-registrada',
@@ -13,7 +14,11 @@ export class AsistenciaRegistradaPage implements OnInit {
   teacherName: string = '';
   section: string = '';
 
-  constructor(private route: ActivatedRoute, private router: Router) {}
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private storageService: StorageService // Inyecta el servicio de almacenamiento
+  ) {}
 
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
@@ -22,7 +27,16 @@ export class AsistenciaRegistradaPage implements OnInit {
       this.subjectName = params['subjectName'] || 'Asignatura no disponible';
       this.teacherName = params['teacherName'] || 'Profesor no disponible';
       this.section = params['section'] || 'Sección no disponible';
+
+      // Incrementar el porcentaje de asistencia
+      this.incrementAttendance(this.subjectName);
     });
+  }
+
+  incrementAttendance(subjectName: string) {
+    let attendance = this.storageService.getItem(subjectName) || 0;
+    attendance = Math.min(attendance + 10, 100); // Incrementar en 10% hasta un máximo de 100%
+    this.storageService.setItem(subjectName, attendance);
   }
 
   volver() {
