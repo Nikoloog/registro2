@@ -31,7 +31,7 @@ export class InicioEstudiantePage implements OnInit {
       this.username = user.username;
       this.role = user.role;
     } else {
-      // Redirigir al login si no hay datos del usuario o si no es alumno
+     
       this.router.navigate(['/login']);
     }
   }

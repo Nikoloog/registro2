@@ -21,7 +21,7 @@ export class Curso1QrPage implements OnInit {
       this.username = params['username'] || 'Nombre del Profesor';
     });
 
-    // Navegar automáticamente a la lista de estudiantes después de 1 minuto (60000 ms)
+   
     setTimeout(() => {
       this.goToListaEstudiantes();
     }, 6000);
