@@ -3,6 +3,8 @@
 RegistrAPP es una aplicación para gestionar la asistencia de estudiantes mediante la lectura de códigos QR.
 
 <img src="https://ionicframework.com/img/ionic-logo-landscape.svg" alt="Logo de Ionic" width="300">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeH5ng8DeRKOEvx_YX9TxMsM9M9WLog9X2PQ&s" alt="Logo de Ionic" width="300">
+
 
 ## Requisitos previos
 
