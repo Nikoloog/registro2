@@ -25,12 +25,12 @@ Sigue estos pasos para instalar y ejecutar la aplicación en tu entorno local:
 2. Navega al directorio del proyecto:
 
    ```bash
-   cd RegistrAPP
+   cd Proyecto-Movil
 
 3. Instala las dependencias del proyecto:
 
    ```bash
-   npm install
+   npm install --legacy-peer-deps
 
 4. Para iniciar la aplicación en modo de desarrollo, ejecuta el siguiente comando:
   ```bash
