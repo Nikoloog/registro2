@@ -25,7 +25,7 @@ Sigue estos pasos para instalar y ejecutar la aplicación en tu entorno local:
 2. Navega al directorio del proyecto:
 
    ```bash
-   cd Proyecto-Movil
+   cd RegistrApp
 
 3. Instala las dependencias del proyecto:
 
