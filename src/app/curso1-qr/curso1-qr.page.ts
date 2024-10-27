@@ -24,7 +24,7 @@ export class Curso1QrPage implements OnInit {
    
     setTimeout(() => {
       this.goToListaEstudiantes();
-    }, 6000);
+    }, 6000000);
   }
 
   goToListaEstudiantes() {

@@ -20,32 +20,19 @@ export class ListarReprobadosPage implements OnInit {
   username: string = '';
   courses = [
     { name: 'Curso 1', link: '/curso1-reprobados' },
-    { name: 'Curso 2', link: '/curso2-reprobados' },
-    { name: 'Curso 3', link: '/curso3-reprobados' },
-    { name: 'Curso 4', link: '/curso4-reprobados' }
+    { name: 'Curso 2', link: '/curso2-reprobados' }
   ];
 
   
   studentsByCourse: StudentsByCourse = {
     'Curso 1': [
-      { name: 'Juan Pérez', grade: 'Reprobado' },
+      { name: 'Nicolas Fernandez', grade: 'Reprobado' },
       { name: 'María López', grade: 'Reprobado' },
-      { name: 'Carlos García', grade: 'Reprobado' },
     ],
     'Curso 2': [
-      { name: 'Ana Torres', grade: 'Reprobado' },
-      { name: 'Luis Martínez', grade: 'Reprobado' },
-      { name: 'Sofía Hernández', grade: 'Reprobado' },
-    ],
-    'Curso 3': [
-      { name: 'Pedro Sánchez', grade: 'Reprobado' },
-      { name: 'Laura Gómez', grade: 'Reprobado' },
-      { name: 'Diego Fernández', grade: 'Reprobado' },
-    ],
-    'Curso 4': [
-      { name: 'Marta Díaz', grade: 'Reprobado' },
-      { name: 'Jorge Ruiz', grade: 'Reprobado' },
-      { name: 'Elena Ramírez', grade: 'Reprobado' },
+      { name: 'Nicolas Fernandez', grade: 'Reprobado' },
+      { name: 'María López', grade: 'Reprobado' },
+
     ]
   };
 

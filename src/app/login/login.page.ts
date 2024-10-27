@@ -15,7 +15,8 @@ export class LoginPage {
 
   users = [
     { username: 'Freddy', password: '1234', role: 'profesor' },
-    { username: 'Nicolas', password: '12345', role: 'alumno' },
+    { username: 'Nicolas Fernandez', password: '12345', role: 'alumno' },
+    { username: 'Katherine Salazar', password: '123456', role: 'alumno' } // Nuevo usuario
   ];
 
   constructor(
@@ -27,8 +28,7 @@ export class LoginPage {
   async login() {
     const user = this.users.find(u => u.username === this.username && u.password === this.password && u.role === this.role);
     if (user) {
-      
-      this.storageService.setItem('user', user);
+      await this.storageService.setItem('users', 'currentUser', user);
       if (user.role === 'profesor') {
         this.router.navigate(['/professor-home'], { queryParams: { username: user.username, role: user.role } });
       } else {
@@ -44,7 +44,6 @@ export class LoginPage {
     }
   }
 
-  
   navigateToResetPassword() {
     this.router.navigate(['/reset-password']);
   }

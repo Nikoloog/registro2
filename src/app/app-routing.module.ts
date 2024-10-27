@@ -106,6 +106,10 @@ const routes: Routes = [
   {
     path: 'asistencia-registrada',
     loadChildren: () => import('./asistencia-registrada/asistencia-registrada.module').then( m => m.AsistenciaRegistradaPageModule)
+  },
+  {
+    path: 'students',
+    loadChildren: () => import('./students/students.module').then( m => m.StudentsPageModule)
   }
 ];
 
@@ -115,4 +119,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -1,0 +1,48 @@
+ion-header {
+    --background: #3880ff;
+    --color: #fff;
+  }
+  
+  ion-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .dodo-logo {
+    height: 40px;
+    width: auto;
+    height: 100px;
+    margin-left: 40px;
+  }
+  
+  ion-content {
+    --background: #f0f0f5;
+  }
+  
+  ion-card {
+    margin: 16px;
+  }
+  
+  ion-card-title {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  ion-item {
+    --background: #fff;
+    border-radius: 8px;
+    margin-bottom: 8px;
+  }
+  
+  ion-button {
+    margin-top: 16px;
+  }
+  
+  ion-button[fill="outline"] {
+    --border-radius: 50%;
+    --padding-start: 0;
+    --padding-end: 0;
+    --min-width: 40px;
+    --min-height: 40px;
+  }

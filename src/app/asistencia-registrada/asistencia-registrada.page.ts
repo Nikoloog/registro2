@@ -28,15 +28,16 @@ export class AsistenciaRegistradaPage implements OnInit {
       this.teacherName = params['teacherName'] || 'Profesor no disponible';
       this.section = params['section'] || 'Sección no disponible';
 
-   
       this.incrementAttendance(this.subjectName);
     });
   }
 
   incrementAttendance(subjectName: string) {
-    let attendance = this.storageService.getItem(subjectName) || 0;
-    attendance = Math.min(attendance + 10, 100); 
-    this.storageService.setItem(subjectName, attendance);
+    this.storageService.getItem('attendance', subjectName).then((attendance: number) => {
+      attendance = attendance || 0;
+      attendance = Math.min(attendance + 10, 100);
+      this.storageService.setItem('attendance', subjectName, attendance);
+    });
   }
 
   volver() {

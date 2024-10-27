@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { ActivatedRoute } from '@angular/router';
+import { StorageService } from '../services/storage.service';
 
 @Component({
   selector: 'app-curso2',
@@ -9,17 +10,29 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class Curso2Page implements OnInit {
   username: string = '';
-  students = [
-    { name: 'Ana Torres', attendance: 90 },
-    { name: 'Luis Martínez', attendance: 60 },
-    { name: 'Sofia Hernández', attendance: 80 },
-  ];
+  students: any[] = [];
 
-  constructor(private navCtrl: NavController, private route: ActivatedRoute) { }
+  constructor(
+    private navCtrl: NavController,
+    private route: ActivatedRoute,
+    private storageService: StorageService
+  ) { }
 
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
       this.username = params['username'];
+    });
+
+    this.loadStudents();
+  }
+
+  loadStudents() {
+    this.storageService.getItem('cursos', 'curso2').then(curso => {
+      if (curso) {
+        this.students = curso.students || [];
+      } else {
+        console.error('Curso no encontrado');
+      }
     });
   }
 

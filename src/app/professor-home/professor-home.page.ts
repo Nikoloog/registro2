@@ -9,26 +9,28 @@ import { StorageService } from '../services/storage.service';
 })
 export class ProfessorHomePage implements OnInit {
   username: string = '';
+  role: string = '';
 
   constructor(private router: Router, private storageService: StorageService) {}
 
   ngOnInit() {
-    const user = this.storageService.getItem('user');
-    if (user && user.role === 'profesor') {
-      this.username = user.username;
-    } else {
-      
-      this.router.navigate(['/login']);
-    }
+    this.storageService.getItem('users', 'currentUser').then((user: any) => {
+      if (user && user.role === 'profesor') {
+        this.username = user.name;
+        this.role = user.role;
+      } else {
+        this.router.navigate(['/login']);
+      }
+    });
   }
 
   navigateTo(page: string) {
-    this.router.navigate([`/${page}`], { queryParams: { username: this.username } });
+    this.router.navigate([`/${page}`], { queryParams: { username: this.username, role: this.role } });
   }
 
   logout() {
-    
-    this.storageService.removeItem('user');
-    this.router.navigate(['/login']);
+    this.storageService.removeItem('users', 'currentUser').then(() => {
+      this.router.navigate(['/login']);
+    });
   }
 }
